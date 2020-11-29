@@ -22,7 +22,8 @@ class Singleton<T> extends _Service<T, Object>
   Singleton(
     Builder<T> builder, {
     ServiceKeyBase key,
-  }) : super(
+  })  : assert(builder != null),
+        super(
           builder: builder,
           key: key,
           useDefaultDisposer: false,
@@ -34,7 +35,8 @@ class ParameterizedSingleton<T, P> extends _Service<T, P>
   ParameterizedSingleton(
     ParameterizedBuilder<T, P> builder, {
     ServiceKeyBase key,
-  }) : super(
+  })  : assert(builder != null),
+        super(
           parameterizedBuilder: builder,
           key: key,
           useDefaultDisposer: false,

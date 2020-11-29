@@ -7,6 +7,7 @@ class RootInjector extends StatefulWidget {
     @required this.child,
   })  : assert(services != null),
         assert(services.every((s) => s != null)),
+        assert(child != null),
         super(key: key);
 
   final List<Service> services;
@@ -87,8 +88,7 @@ class _InheritedRootInjector extends InheritedWidget {
     Key key,
     @required _RootInjectorState state,
     @required Widget child,
-  })  : assert(child != null),
-        _state = state,
+  })  : _state = state,
         super(key: key, child: child);
 
   final _RootInjectorState _state;

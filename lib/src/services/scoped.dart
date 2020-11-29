@@ -25,7 +25,8 @@ class Scoped<T> extends _Service<T, Object>
     ServiceKeyBase key,
     Disposer<T> disposer,
     bool useDefaultDisposer = true,
-  }) : super(
+  })  : assert(builder != null),
+        super(
           builder: builder,
           key: key,
           disposer: disposer,
@@ -40,7 +41,8 @@ class ParameterizedScoped<T, P> extends _Service<T, P>
     ServiceKeyBase key,
     Disposer<T> disposer,
     bool useDefaultDisposer = true,
-  }) : super(
+  })  : assert(builder != null),
+        super(
           parameterizedBuilder: builder,
           key: key,
           disposer: disposer,
