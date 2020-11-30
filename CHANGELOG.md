@@ -1,3 +1,7 @@
+## [0.0.1+5] - Nov 30, 2020
+
+* Example fixes.
+
 ## [0.0.1+4] - Nov 30, 2020
 
 * Example fixes.
