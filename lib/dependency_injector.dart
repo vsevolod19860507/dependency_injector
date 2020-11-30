@@ -1,1 +1,1 @@
-export 'src/dependency_injector.dart';
+export 'src/dependency_injector.dart' hide RootInjectorForTest, replaceWithMock;

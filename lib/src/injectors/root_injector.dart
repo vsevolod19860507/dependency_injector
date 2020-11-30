@@ -19,23 +19,13 @@ class RootInjector extends StatefulWidget {
 }
 
 class _RootInjectorState extends State<RootInjector> with _Injector {
-  @override
-  void initState() {
-    super.initState();
+  static Set<_Service<Object, Object>> _getSetOfServices(
+      List<Service> services) {
+    final _services =
+        services.map((s) => s as _Service<Object, Object>).toSet();
 
-    if (context._getInheritedWidget<_InheritedRootInjector>() != null) {
-      throw InjectorError(
-        title: 'Multiple RootInjectors found!',
-        message: 'There is more than one RootInjector in the tree.',
-        todo: 'Leave only one RootInjector.',
-      );
-    }
-
-    _services =
-        widget.services.map((s) => s as _Service<Object, Object>).toSet();
-
-    if (widget.services.length != _services.length) {
-      final duplicateServices = widget.services.fold<Map<Service, int>>(
+    if (services.length != _services.length) {
+      final duplicateServices = services.fold<Map<Service, int>>(
         {},
         (acc, s) => acc..update(s, (value) => value + 1, ifAbsent: () => 1),
       )..removeWhere((key, value) => value < 2);
@@ -52,6 +42,23 @@ class _RootInjectorState extends State<RootInjector> with _Injector {
             'Check the services parameter of the RootInjector, remove duplicates or provide unique keys for them.',
       );
     }
+
+    return _services;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (context._getInheritedWidget<_InheritedRootInjector>() != null) {
+      throw InjectorError(
+        title: 'Multiple RootInjectors found!',
+        message: 'There is more than one RootInjector in the tree.',
+        todo: 'Leave only one RootInjector.',
+      );
+    }
+
+    _services = _getSetOfServices(widget.services);
   }
 
   T _getInstance<T, P>({

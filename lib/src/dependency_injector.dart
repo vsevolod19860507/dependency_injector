@@ -10,3 +10,4 @@ part 'services/service_id.dart';
 part 'services/base_service.dart';
 part 'services/singleton.dart';
 part 'services/transient.dart';
+part 'test.dart';

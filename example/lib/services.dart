@@ -106,6 +106,9 @@ final services = [
 
   // Variants tab
   Transient(() => Transient61(transient623: inject(), transient633: inject())),
+  ParameterizedScoped<Scoped62, int>(
+    (p) => Scoped62(p),
+  ),
   Transient(() => Transient62()),
   Transient(() => Transient63()),
   Scoped(() => Scoped61()),
@@ -114,5 +117,8 @@ final services = [
   ),
   ParameterizedTransient<Transient65, int>(
     (p) => Transient65(p),
+  ),
+  ParameterizedTransient<Transient66, int>(
+    (p) => Transient66(p),
   ),
 ];

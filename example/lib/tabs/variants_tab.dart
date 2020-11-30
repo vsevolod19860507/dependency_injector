@@ -6,8 +6,8 @@ import 'variants_tab_data.dart';
 
 final scope4List = List.generate(
   5,
-  (index) => Injector(() => Scope4(
-        name: 'Injector ${index + 5}:',
+  (index) => Injector(() => Scope7(
+        name: 'Injector ${index + 8}:',
         transient65: inject(parameters: index),
       )),
 );
@@ -25,9 +25,8 @@ class VariantsTab extends StatelessWidget {
               transient623: inject(),
               transient633: inject(),
             )),
-        Injector(() => Scope2(
-              name: 'Injector 2:',
-            )),
+        Injector(() => Scope2(name: 'Injector 2:')),
+        Injector(() => Scope4(name: 'Injector 5:')),
         ListView.builder(
           shrinkWrap: true,
           itemCount: scope4List.length,
@@ -197,8 +196,126 @@ class Scope3 extends StatelessWidget {
   }
 }
 
-class Scope4 extends StatelessWidget {
-  const Scope4({
+class Scope4 extends StatefulWidget {
+  Scope4({Key key, @required this.name}) : super(key: key);
+
+  final String name;
+
+  final Scoped62 scoped62 = inject(parameters: 777);
+
+  @override
+  _Scope4State createState() => _Scope4State();
+}
+
+class _Scope4State extends State<Scope4> {
+  void onReset() {
+    setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(widget.name,
+              style: const TextStyle(fontWeight: FontWeight.bold)),
+          const Divider(height: 4, color: Colors.blueGrey),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Expanded(
+                child: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      widget.scoped62.decrement();
+                    });
+                  },
+                  icon: const Icon(Icons.remove),
+                  color: Colors.blue,
+                ),
+              ),
+              Expanded(
+                child: Injector(() => Scope5(
+                      name: 'Injector 6:',
+                      onReset: onReset,
+                    )),
+              ),
+              Expanded(
+                child: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      widget.scoped62.increment();
+                    });
+                  },
+                  icon: const Icon(Icons.add),
+                  color: Colors.red,
+                ),
+              ),
+            ],
+          ),
+          Injector(() => Scope6(name: 'Injector 7:')),
+        ],
+      ),
+    );
+  }
+}
+
+class Scope5 extends StatelessWidget {
+  Scope5({Key key, @required this.name, @required this.onReset})
+      : super(key: key);
+
+  final Scoped62 scoped62 = inject();
+
+  final String name;
+  final VoidCallback onReset;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
+          const Divider(height: 4, color: Colors.blueGrey),
+          IconButton(
+            onPressed: () {
+              scoped62.reset();
+              onReset();
+            },
+            icon: const Icon(Icons.refresh),
+            color: Colors.red,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Scope6 extends StatelessWidget {
+  Scope6({Key key, @required this.name}) : super(key: key);
+
+  final Scoped62 scoped62 = inject();
+
+  final String name;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppCard(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
+          const Divider(height: 4, color: Colors.blueGrey),
+          Center(child: Text(scoped62.value.toString())),
+        ],
+      ),
+    );
+  }
+}
+
+class Scope7 extends StatelessWidget {
+  const Scope7({
     Key key,
     @required this.name,
     @required this.transient65,
@@ -216,12 +333,7 @@ class Scope4 extends StatelessWidget {
         children: [
           Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
           const Divider(height: 4, color: Colors.blueGrey),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Text(transient65.value.toString()),
-            ],
-          ),
+          Center(child: Text(transient65.value.toString())),
         ],
       ),
     );

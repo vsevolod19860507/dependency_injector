@@ -57,3 +57,43 @@ class Transient65 {
 
   final int value;
 }
+
+class Scoped62 {
+  Scoped62(this.initialValue) : transient66 = inject(parameters: initialValue);
+
+  final int initialValue;
+
+  final Transient66 transient66;
+
+  int get value => transient66.value;
+
+  void reset() {
+    transient66.reset = initialValue;
+  }
+
+  void increment() {
+    transient66.increment();
+  }
+
+  void decrement() {
+    transient66.decrement();
+  }
+}
+
+class Transient66 {
+  Transient66(this.value);
+
+  int value;
+
+  set reset(int value) {
+    this.value = value;
+  }
+
+  void increment() {
+    value++;
+  }
+
+  void decrement() {
+    value--;
+  }
+}
