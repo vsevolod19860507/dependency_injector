@@ -1,6 +1,7 @@
 import 'package:dependency_injector/dependency_injector.dart';
 import 'package:flutter/material.dart';
 
+import 'app_card.dart';
 import 'variants_tab_data.dart';
 
 final scope4List = List.generate(
@@ -112,12 +113,7 @@ class Scope2 extends StatefulWidget {
 class _Scope2State extends State<Scope2> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.blueGrey),
-          borderRadius: BorderRadius.circular(4)),
+    return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -186,12 +182,7 @@ class Scope3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.blueGrey),
-          borderRadius: BorderRadius.circular(4)),
+    return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -224,12 +215,7 @@ class Scope4 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.blueGrey),
-          borderRadius: BorderRadius.circular(4)),
+    return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

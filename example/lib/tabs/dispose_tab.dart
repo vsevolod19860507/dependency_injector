@@ -1,6 +1,7 @@
 import 'package:dependency_injector/dependency_injector.dart';
 import 'package:flutter/material.dart';
 
+import 'app_card.dart';
 import 'dispose_tab_data.dart';
 
 class DisposeTab extends StatelessWidget {
@@ -29,12 +30,7 @@ class Scope1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.blueGrey),
-          borderRadius: BorderRadius.circular(4)),
+    return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

@@ -2,6 +2,7 @@ import 'package:dependency_injector/dependency_injector.dart';
 import 'package:flutter/material.dart';
 
 import '../keys.dart';
+import 'app_card.dart';
 import 'singleton_tab_data.dart';
 
 class SingletonTab extends StatelessWidget {
@@ -46,12 +47,7 @@ class Scope1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.blueGrey),
-          borderRadius: BorderRadius.circular(4)),
+    return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -108,12 +104,7 @@ class Scope2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(4),
-      padding: const EdgeInsets.all(4),
-      decoration: BoxDecoration(
-          border: Border.all(color: Colors.blueGrey),
-          borderRadius: BorderRadius.circular(4)),
+    return AppCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

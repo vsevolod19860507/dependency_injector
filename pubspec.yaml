@@ -1,6 +1,6 @@
 name: dependency_injector
 description: A dependency injection system for Flutter that automatically calls a dispose method if there is one.
-version: 0.0.1+3
+version: 0.0.1+4
 homepage: https://github.com/vr19860507/dependency_injector
 
 environment:
