@@ -17,6 +17,7 @@ mixin _Singleton<T, P> on _Service<T, P> {
   }
 }
 
+/// Used to create singleton services.
 class Singleton<T> extends _Service<T, Object>
     with _ServiceMixin<T, Object>, _Singleton<T, Object> {
   Singleton(
@@ -30,6 +31,7 @@ class Singleton<T> extends _Service<T, Object>
         );
 }
 
+/// Used to create singleton services with parameters.
 class ParameterizedSingleton<T, P> extends _Service<T, P>
     with _ParameterizedServiceMixin<T, P>, _Singleton<T, P> {
   ParameterizedSingleton(

@@ -1,5 +1,6 @@
 part of 'dependency_injector.dart';
 
+/// Used only in tests. To enable the inject property.
 @visibleForTesting
 class RootInjectorForTest with _Injector {
   RootInjectorForTest(List<Service> services)
@@ -21,6 +22,7 @@ class RootInjectorForTest with _Injector {
   }
 }
 
+/// Used only in tests. To replace services with mock.
 @visibleForTesting
 List<Service> replaceWithMock({
   @required List<Service> services,

@@ -1,3 +1,7 @@
+## [0.0.2+1] - Nov 30, 2020
+
+* Added dartdoc comments.
+
 ## [0.0.2] - Nov 30, 2020
 
 * Example fixes.

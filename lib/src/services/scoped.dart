@@ -18,6 +18,7 @@ mixin _Scoped<T, P> on _Service<T, P> {
   }
 }
 
+/// Used to create scoped services.
 class Scoped<T> extends _Service<T, Object>
     with _ServiceMixin<T, Object>, _Scoped<T, Object> {
   Scoped(
@@ -34,6 +35,7 @@ class Scoped<T> extends _Service<T, Object>
         );
 }
 
+/// Used to create scoped services with parameters.
 class ParameterizedScoped<T, P> extends _Service<T, P>
     with _ParameterizedServiceMixin<T, P>, _Scoped<T, P> {
   ParameterizedScoped(

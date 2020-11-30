@@ -1,7 +1,9 @@
 part of '../dependency_injector.dart';
 
+/// Service indexes.
 enum ServiceIndex { zero, one, two, three, four, five, six, seven, eight, nine }
 
+/// Base class for keys.
 @immutable
 abstract class ServiceKeyBase {
   const ServiceKeyBase(this.name);
@@ -9,10 +11,13 @@ abstract class ServiceKeyBase {
   final String name;
 }
 
+/// Typedef for builder function.
 typedef Builder<T> = T Function();
 
+/// Typedef for parameterizedBuilder function.
 typedef ParameterizedBuilder<T, P> = T Function(P parameters);
 
+/// Typedef for disposer function.
 typedef Disposer<T> = Future<void> Function(T);
 
 extension _SetExtension<T extends Service> on Set<T> {
@@ -26,6 +31,7 @@ extension _SetExtension<T extends Service> on Set<T> {
       );
 }
 
+/// Base class for all services.
 @immutable
 abstract class Service {
   const Service._(_ServiceIdBase id, ServiceIndex index)

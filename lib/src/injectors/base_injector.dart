@@ -1,5 +1,6 @@
 part of '../dependency_injector.dart';
 
+/// Injector error.
 @immutable
 class InjectorError extends Error {
   InjectorError({
@@ -27,6 +28,7 @@ typedef Inject = T Function<T, P extends Object>({
   P parameters,
 });
 
+/// Property used for dependency injection.
 Inject get inject => _Injector._inject;
 
 mixin _Injector {

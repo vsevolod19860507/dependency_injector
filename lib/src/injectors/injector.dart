@@ -1,5 +1,6 @@
 part of '../dependency_injector.dart';
 
+/// Used as a wrapper for the widget you want to inject dependencies into.
 class Injector extends StatefulWidget {
   const Injector(
     this.builder, {

@@ -17,6 +17,7 @@ mixin _Transient<T, P> on _Service<T, P> {
   }
 }
 
+/// Used to create transient services.
 class Transient<T> extends _Service<T, Object>
     with _ServiceMixin<T, Object>, _Transient<T, Object> {
   Transient(
@@ -33,6 +34,7 @@ class Transient<T> extends _Service<T, Object>
         );
 }
 
+/// Used to create transient services with parameters.
 class ParameterizedTransient<T, P> extends _Service<T, P>
     with _ParameterizedServiceMixin<T, P>, _Transient<T, P> {
   ParameterizedTransient(
