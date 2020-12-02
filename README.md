@@ -1,14 +1,42 @@
-# dependency_injector
+# Dependency Injector
 
-A dependency injection system for Flutter that automatically calls a dispose method if there is one.
+A dependency injection system for Flutter that automatically calls cancel, close and dispose methods, if any.
 
 ## Getting Started
 
-Documentation coming soon.
+Configure the services you want to use in your application.
 
-For now you can look at the source code of the [example](https://pub.dev/packages/dependency_injector/example) and run it.
+```dart
+final services = [
+  Transient(() => SomeService()),
+  Singleton(() => Repository()),
+];
+```
 
-Basic example
+Place the `RootInjector` with your services list in the root of your application, and wrap the widget where you want to inject the service in the `Injector`.
+
+```dart
+void main() {
+  runApp(RootInjector(
+    services: services,
+    child: Injector(() => MyApp()),
+  ));
+}
+```
+
+Inject your service using the `inject` property.
+
+```dart
+class MyApp extends StatelessWidget {
+  MyApp({Key key}) : super(key: key);
+
+  final SomeService someService = inject();
+
+  ...
+}
+```
+
+Complete example.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -53,3 +81,8 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+
+
+Documentation coming soon.
+
+For now you can look at the source code of the [example](https://pub.dev/packages/dependency_injector/example) and run it.

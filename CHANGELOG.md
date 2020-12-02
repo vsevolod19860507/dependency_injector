@@ -1,3 +1,7 @@
+## [0.0.2+2] - Dec 02, 2020
+
+* Documentation updated
+
 ## [0.0.2+1] - Nov 30, 2020
 
 * Added dartdoc comments.

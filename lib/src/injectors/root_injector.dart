@@ -1,6 +1,6 @@
 part of '../dependency_injector.dart';
 
-/// Used to configure services. Place in the root of your application.
+/// Used to configure services. Place it in the root of your application.
 class RootInjector extends StatefulWidget {
   RootInjector({
     Key key,
