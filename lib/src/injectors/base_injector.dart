@@ -22,6 +22,7 @@ extension _BuildContextExtension on BuildContext {
       getElementForInheritedWidgetOfExactType<T>()?.widget as T;
 }
 
+/// Typedef for inject property.
 typedef Inject = T Function<T, P extends Object>({
   ServiceKeyBase key,
   ServiceIndex index,

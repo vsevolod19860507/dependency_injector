@@ -1,6 +1,6 @@
 name: dependency_injector
 description: A dependency injection system for Flutter that automatically calls cancel, close and dispose methods, if any.
-version: 0.0.2+2
+version: 0.1.0
 homepage: https://github.com/vr19860507/dependency_injector
 
 environment:
