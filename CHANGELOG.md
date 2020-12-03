@@ -1,3 +1,7 @@
+## [0.1.0+1] - Dec 03, 2020
+
+* Documentation updated
+
 ## [0.1.0] - Dec 03, 2020
 
 * Documentation updated

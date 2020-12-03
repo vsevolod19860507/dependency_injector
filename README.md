@@ -273,7 +273,7 @@ class SomeService1 {
 }
 
 final services = [
-  Singleton(() => SomeService1()), // There will be an error.
+  Singleton(() => SomeService1()),
 ];
 ```
 
@@ -285,7 +285,7 @@ class SomeService1 {
 }
 
 final services = [
-  Singleton(() => SomeService1(inject())), // There will be an error.
+  Singleton(() => SomeService1(inject())),
 ];
 ```
 
