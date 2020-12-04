@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'base_service.dart';
 
 abstract class BaseVariants extends BaseService {
-  static int counter = 0;
-
   BaseVariants() : super(counter++);
+
+  static int counter = 0;
 
   void dispose() {
     counter = 0;

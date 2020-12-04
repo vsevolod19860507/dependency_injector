@@ -23,7 +23,7 @@ void main() {
     ],
   );
 
-  testWidgets('Variants tab Injector 5', (WidgetTester tester) async {
+  testWidgets('Variants tab Injector 5', (tester) async {
     await tester.pumpWidget(
       RootInjector(
         services: newServices,

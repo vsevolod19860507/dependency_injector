@@ -1,3 +1,7 @@
+## [0.1.0+2] - Dec 04, 2020
+
+* Internal fixes.
+
 ## [0.1.0+1] - Dec 03, 2020
 
 * Documentation updated

@@ -39,8 +39,8 @@ class _RootInjectorState extends State<RootInjector> with _Injector {
         title: 'Duplicate services found!',
         message:
             'The following services are described more than once:\n\t$message',
-        todo:
-            'Check the services parameter of the RootInjector, remove duplicates or provide unique keys for them.',
+        todo: 'Check the services parameter of the RootInjector, '
+            'remove duplicates or provide unique keys for them.',
       );
     }
 

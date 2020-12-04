@@ -3,9 +3,9 @@ import 'package:dependency_injector/dependency_injector.dart';
 import 'base_service.dart';
 
 abstract class BaseDispose extends BaseService {
-  static int counter = 0;
-
   BaseDispose() : super(counter++);
+
+  static int counter = 0;
 }
 
 abstract class BaseDispose1 extends BaseDispose {

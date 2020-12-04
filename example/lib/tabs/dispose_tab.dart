@@ -44,8 +44,8 @@ class Scope1 extends StatelessWidget {
           ),
           scoped51.transient51.scoped52.transient52.toText(
             30,
-            suffix:
-                '.value = \'${scoped51.transient51.scoped52.transient52.value}\'',
+            suffix: '.value = '
+                '\'${scoped51.transient51.scoped52.transient52.value}\'',
           ),
           scoped53.toText(0),
           transient53.toText(0),

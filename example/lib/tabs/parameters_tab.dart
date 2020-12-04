@@ -109,29 +109,29 @@ class Scope2 extends StatelessWidget {
           Text(name, style: const TextStyle(fontWeight: FontWeight.bold)),
           const Divider(height: 4, color: Colors.blueGrey),
           transient43KeyNullIndexZero1.toText(0,
-              suffix:
-                  'KeyNullIndexZero.value = \'${transient43KeyNullIndexZero1.value}\''),
+              suffix: 'KeyNullIndexZero.value = '
+                  '\'${transient43KeyNullIndexZero1.value}\''),
           transient43KeyNullIndexZero2.toText(0,
-              suffix:
-                  'KeyNullIndexZero.value = \'${transient43KeyNullIndexZero2.value}\''),
+              suffix: 'KeyNullIndexZero.value = '
+                  '\'${transient43KeyNullIndexZero2.value}\''),
           transient43KeyNullIndexOne1.toText(0,
-              suffix:
-                  'KeyNullIndexOne.value = \'${transient43KeyNullIndexOne1.value}\''),
+              suffix: 'KeyNullIndexOne.value = '
+                  '\'${transient43KeyNullIndexOne1.value}\''),
           transient43KeyNullIndexOne2.toText(0,
-              suffix:
-                  'KeyNullIndexOne.value = \'${transient43KeyNullIndexOne2.value}\''),
+              suffix: 'KeyNullIndexOne.value = '
+                  '\'${transient43KeyNullIndexOne2.value}\''),
           transient43Key41IndexZero1.toText(0,
-              suffix:
-                  'Key41IndexZero.value = \'${transient43Key41IndexZero1.value}\''),
+              suffix: 'Key41IndexZero.value = '
+                  '\'${transient43Key41IndexZero1.value}\''),
           transient43Key41IndexZero2.toText(0,
-              suffix:
-                  'Key41IndexZero.value = \'${transient43Key41IndexZero2.value}\''),
+              suffix: 'Key41IndexZero.value = '
+                  '\'${transient43Key41IndexZero2.value}\''),
           transient43Key41IndexOne1.toText(0,
-              suffix:
-                  'Key41IndexOne.value = \'${transient43Key41IndexOne1.value}\''),
+              suffix: 'Key41IndexOne.value = '
+                  '\'${transient43Key41IndexOne1.value}\''),
           transient43Key41IndexOne2.toText(0,
-              suffix:
-                  'Key41IndexOne.value = \'${transient43Key41IndexOne2.value}\''),
+              suffix: 'Key41IndexOne.value = '
+                  '\'${transient43Key41IndexOne2.value}\''),
         ],
       ),
     );

@@ -3,9 +3,9 @@ import 'package:dependency_injector/dependency_injector.dart';
 import 'base_service.dart';
 
 abstract class BaseTransient extends BaseService {
-  static int counter = 0;
-
   BaseTransient() : super(counter++);
+
+  static int counter = 0;
 
   void dispose() {
     counter = 1;

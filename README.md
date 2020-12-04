@@ -342,7 +342,7 @@ For widget tests do this
 
 ```dart
 void main() {
-  testWidgets('Some Widget Test', (WidgetTester tester) async {
+  testWidgets('Some Widget Test', (tester) async {
     await tester.pumpWidget(
       RootInjector(
         services: services,

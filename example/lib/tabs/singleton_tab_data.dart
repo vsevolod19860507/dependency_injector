@@ -3,9 +3,9 @@ import 'package:dependency_injector/dependency_injector.dart';
 import 'base_service.dart';
 
 abstract class BaseSingleton extends BaseService {
-  static int counter = 0;
-
   BaseSingleton() : super(counter++);
+
+  static int counter = 0;
 }
 
 class Singleton11 extends BaseSingleton {

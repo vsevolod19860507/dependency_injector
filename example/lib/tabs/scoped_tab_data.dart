@@ -3,9 +3,9 @@ import 'package:dependency_injector/dependency_injector.dart';
 import 'base_service.dart';
 
 abstract class BaseScoped extends BaseService {
-  static int counter = 0;
-
   BaseScoped() : super(counter++);
+
+  static int counter = 0;
 
   void dispose() {
     counter = 0;

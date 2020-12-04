@@ -61,10 +61,14 @@ class _InjectorState extends State<Injector> with _Injector {
     if (service == null) {
       throw InjectorError(
         title: 'New service not found!',
-        message:
-            'You are injecting a new service ${_ServiceId<T>(key)._name}#$index after the injector has been initialized.',
-        todo:
-            'If you just added a new dependency manually during development, just do a hot restart.\nIf not, make sure you are not adding new dependencies as a result of conditional statements or expressions, or something like this, after the injector has been initialized.',
+        message: 'You are injecting a new service '
+            '${_ServiceId<T>(key)._name}#$index '
+            'after the injector has been initialized.',
+        todo: 'If you just added a new dependency manually during development, '
+            'just do a hot restart.\nIf not, make sure you are not adding '
+            'new dependencies as a result of conditional statements '
+            'or expressions, or something like this, '
+            'after the injector has been initialized.',
       );
     }
 

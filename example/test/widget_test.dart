@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('Variants tab Injector 5', (WidgetTester tester) async {
+  testWidgets('Variants tab Injector 5', (tester) async {
     await tester.pumpWidget(
       RootInjector(
         services: services,

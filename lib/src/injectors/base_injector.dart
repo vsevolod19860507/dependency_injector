@@ -68,8 +68,10 @@ mixin _Injector {
       throw InjectorError(
         title: 'Service not found!',
         message: 'The next service not found: ${_ServiceId<T>(key)._name}.',
-        todo:
-            'If this happened during development, do a hot restart first.\nIf not or did not help then check the service parameter of the RootInjector, add the configuration for the missing service.',
+        todo: 'If this happened during development, do a hot restart first.\n'
+            'If not or did not help then check the service parameter '
+            'of the RootInjector, '
+            'add the configuration for the missing service.',
       );
     }
 
